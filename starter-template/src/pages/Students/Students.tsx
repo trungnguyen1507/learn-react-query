@@ -1,5 +1,5 @@
-import { keepPreviousData, useMutation, useQuery } from '@tanstack/react-query'
-import { deleteStudent, getStudents } from 'apis/students.api'
+import { keepPreviousData, useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import { deleteStudent, getStudent, getStudents } from 'apis/students.api'
 import classNames from 'classnames'
 import { Fragment, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -19,10 +19,11 @@ export default function Students() {
   //     })
   //     .finally(() => setIsLoading(false))
   // }, [])
+  const queryClient = useQueryClient()
   const queryString: { page?: string } = useQueryString()
   const page = Number(queryString.page) || 1
 
-  const { data, isLoading } = useQuery({
+  const studentsQuery = useQuery({
     queryKey: ['students', page],
     queryFn: () => getStudents(page, LIMIT),
     placeholderData: keepPreviousData
@@ -32,14 +33,23 @@ export default function Students() {
     mutationFn: (id: number | string) => deleteStudent(id),
     onSuccess: (_, id) => {
       toast.success(`Delete success student with id is ${id}`)
+      queryClient.invalidateQueries({ queryKey: ['students', page], exact: true })
     }
   })
 
-  const totalStudentsCount = Number(data?.headers['x-total-count']) || 0
+  const totalStudentsCount = Number(studentsQuery.data?.headers['x-total-count']) || 0
   const totalPage = Math.ceil(totalStudentsCount / LIMIT)
 
   const handleDelete = (id: number | string) => {
     deleteStudentMutation.mutate(id)
+  }
+
+  const handlePrefetchStudent = (id: number | string) => {
+    queryClient.prefetchQuery({
+      queryKey: ['student', String(id)],
+      queryFn: () => getStudent(id),
+      staleTime: 10 * 1000
+    })
   }
 
   return (
@@ -54,7 +64,7 @@ export default function Students() {
         </Link>
       </div>
 
-      {isLoading && (
+      {studentsQuery.isLoading && (
         <div role='status' className='mt-6 animate-pulse'>
           <div className='mb-4 h-4  rounded bg-gray-200' />
           <div className='mb-2.5 h-10  rounded bg-gray-200' />
@@ -72,7 +82,7 @@ export default function Students() {
           <span className='sr-only'>Loading...</span>
         </div>
       )}
-      {!isLoading && (
+      {!studentsQuery.isLoading && (
         <Fragment>
           <div className='relative mt-6 overflow-x-auto shadow-md sm:rounded-lg'>
             <table className='w-full text-left text-sm text-gray-500'>
@@ -96,8 +106,12 @@ export default function Students() {
                 </tr>
               </thead>
               <tbody>
-                {data?.data.map((student) => (
-                  <tr key={student.id} className='border-b bg-white hover:bg-gray-50'>
+                {studentsQuery.data?.data.map((student) => (
+                  <tr
+                    onMouseEnter={() => handlePrefetchStudent(student.id)}
+                    key={student.id}
+                    className='border-b bg-white hover:bg-gray-50'
+                  >
                     <td className='py-4 px-6'>{student.id}</td>
                     <td className='py-4 px-6'>
                       <img src={student.avatar} alt='student' className='h-5 w-5' />
