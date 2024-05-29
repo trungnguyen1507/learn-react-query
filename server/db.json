@@ -61,16 +61,6 @@
       "btc_address": "1HUjh4x4nQCGmZ5L8nhWEm8ECu2t6QLr1f"
     },
     {
-      "id": 7,
-      "first_name": "Louis",
-      "last_name": "Kitchingman",
-      "email": "lkitchingman6@reddit.com",
-      "gender": "Male",
-      "country": "Indonesia",
-      "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGSSURBVCjPVVFNSwJhEF78Ad79Cf6PvXQRsotUlzKICosuRYmR2RJR0KE6lBFFZVEbpFBSqKu2rum6llFS9HHI4iUhT153n6ZtIWMOM+/MM88z7wwH7s9Ub16SJcnbmrNcxVm2q7Z8/QPvEOtntpj92NkCqITLepEpjix7xQtiLOoQ2b6+E7YAN/5nfOEJ2WbKqOIOJ4bYVMEQx4LfBBQDsvFMhUcCVU1/CxVXmDBGA5ZETrhDCQVcYAPbyEJBhvrnBVPiSpNr6cYDNCQwo4zzU/ySckkgDYuNuVpI42T9k4gLKGMPs/xPzzovQiY2hQYe0jlJfyNNhTqiWDYBq/wBMcSRpnyPzu1oS7WtxjVBSthU1vgVksiQ3Dn6Gp5ah2YOKQo5GiuHPA6xT1EKpxQNCNYejgIR457KKio0S56YckjSa9jo//3mrj+BV0QQagqGTOo+Y7gZIf1puP3WHoLhEb2PjTlCTCWGXtbp8DCX3hZuOdaIc9A+aQvWk4ihq95p67a7nP+u+Ws+r0dql9z/zv0NCYhdCPKZ7oYAAAAASUVORK5CYII=",
-      "btc_address": "1CZXCy88sbPxThH3fvpWSA34hhLoVzWBwT"
-    },
-    {
       "id": 8,
       "first_name": "Christean",
       "last_name": "McAleese",
@@ -825,7 +815,7 @@
       "first_name": "Marnia",
       "last_name": "Matiebe",
       "email": "mmatiebe2a@myspace.com",
-      "gender": "Female",
+      "gender": "female",
       "country": "Brazil",
       "avatar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAALHSURBVDjLbZNdSJNhFMf/m/v+atayydzEFk5rlbrmLBcpRV4OW9hVdNNtV14IuxQqIoLuvI1ouykLE4rdhnNivTmKikywbaBurM19f77v2/O8MJmtBw7PA+97fuec/zlHxPM8Wk8ymTSLxWIvx3FTjUbDQQz1ep0plUrBbDa76Ha7463/i1oBiUTiokgkmpNKpR5yg4BAAdVqFYVCAbFYbCmXyz2anp4ON33Ezcfu7q6ZRJ1TKBQeuVwOCmYYRrBarQalUgmLxeLZ39+fW1hYMLcBSJpeiUQiRKYOFOJ2X8aViQlotVqUy2WQzGAymTx7e3vepp+k+ahUKlMajYbeQrQf20mshVeFTFyuMfQaj1B90NXVhUwmM0Vcnh7KgNTpoD/TemUk+lo4BJ3FCV3fJD5tN6DT6WiWUKvVKBaLjrYSiMqCYDR9EhYcB9SgQoWVwSCLIvX1AfhGHkRECsD/AEw+nwfLsiDtwqWxURTzWZTKWQwr30PVeQ7y4jqi0SjVg2kDEHWDRBzhHQqFIEUZd66ZMHMqDL3xAnTdwxDnGMR+rtIyg22AdDq9uLGxEYzH4yDdQCQSwbs3z5D+tQytQQ829xZG+21YVd9TBg231AYgyruIQCdWVlaEj4ODA7Ad20H3mRnSos9Yf+6HRl+GWVczjPSJHx4C+P3+m6QDfjJ5Q6T+e4FAAMuBJziqlkLbWQJX3SbCcmALH9E3MQu7sXprfPTs/QMAmcCXVqtVptfrYTabY46R87huZ6G3DIErfSG+ZTi8NnC1HSgUmxhw3sCope47ANDhUalU6OnpgdPphOskYOkfh0qbIq37QzamA8zrTRoKXGUTx/t7cdUmwYd5+2lhmXw+H7+1tSUMEbXZyRzcd1+gQ/ybADLEsXVjxehQ2pD4FsHm8vwr0b/rTM/qY0eKZzkVz/Ekfa7F+IObThrxZf4CSlpy3yYZtPsAAAAASUVORK5CYII=",
       "btc_address": "1sM9uE5cudi53HdkqeZZdpvohHQ2eiA42"
@@ -1003,8 +993,8 @@
     {
       "first_name": "123",
       "last_name": "123",
-      "email": "duthanhduoc@gmail.com",
-      "gender": "male",
+      "email": "duthanhduoc6@gmail.com",
+      "gender": "Male",
       "country": "123",
       "avatar": "123",
       "btc_address": "123",
